@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header_pic {
+    height: 30vh;
+    width: 40vh;
+}
+#namestyle {
+    font-size: 25px;
+    font-weight: 700;
+    margin-left: 27%;
+}
+canvas {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 150vw;
+    height: 100vh;
+    z-index: -10000;
+  }
+.gameheader {
+    height: 5vh;
+    width: 70vw;
+    text-align: center;
+    margin-top: 4vh;
+}
+/* .picsofgame {
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30vh;
+    overflow: hidden;
+} */
+.picsofgame {
+    display: flex;
+    flex-direction: row;
+    gap: 180px;
+}
+#rockimg {
+    height: 24vh;
+    width: 12vw;
+    object-fit: cover;
+    border-radius: 60%;
+}
+#paperimg{
+    height: 24vh;
+    width: 12vw;
+    object-fit: cover;
+    border-radius: 60%;
+}
+#scissorimg {
+    height: 24vh;
+    width: 12vw;
+    object-fit: cover;
+    border-radius: 60%;
+}
+#rockimg:hover {
+    border: 5px solid white;
+    cursor: pointer;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+#paperimg:hover {
+    border: 5px solid white;
+    cursor: pointer;
+}
+#scissorimg:hover {
+    border: 5px solid white;
+    cursor: pointer;
+}
+.scoreboard {
+    height: 30vh;
+    width: 70vw;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+#user-score1 {
+    font-size: 50px;
+    padding: 10px;
+}
+#user-score2 {
+    font-size: 50px;
+    padding: 10px;
+}
+#computer_title {
+    display: block;
+}
+#responsive_title {
+    display: none;
+}
+
+.buttons {
+    height: 10vh;
+    width: 70vw;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#resetbtn {
+    height: 7vh;
+    width: 12vw;
+    border-radius: 10px;
+    /* border: 4px solid black; */
+    background-color: green;
+    font-size: large;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    transition: .5s ease-in-out;
+}
+#resetbtn:hover {
+    background-color: red;
+    border: 4px solid tomato;
+    cursor:pointer;
+}
+.winorlose {
+    height: 100px;
+    width: 900px;
+    /* border: 3px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6vw;
+    font-family: 'poppins',sans-serif;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+}
+
+
+#try {
+    margin-top: 300px;
+    font-size: 30px;
+}
+
+
+@media screen and (max-width: 992px) {
+    .picsofgame {
+        display: flex;
+        flex-direction: row;
+        gap: 100px;
+    }
+    #rockimg {
+        height: 19vh;
+        width: 12vw;
+        object-fit: cover;
+        border-radius: 60%;
+    }
+    #paperimg{
+        height: 19vh;
+        width: 12vw;
+        object-fit: cover;
+        border-radius: 60%;
+    }
+    #scissorimg {
+        height: 19vh;
+        width: 12vw;
+        object-fit: cover;
+        border-radius: 60%;
+    }
+    .winorlose {
+        height: 100px;
+        width: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5vw;
+        font-family: poppins,sans-serif;
+        word-spacing: 3px;
+        letter-spacing: 2px;
+    }
+    .winorlose {
+        margin-left: 20px;
+        font-size: 19px;
+        margin-top: 23px;
+        padding: 10px;
+        width: 65vw;
+    }
+    #computer_title {
+        display: none;
+    }
+    #responsive_title {
+        display: block;
+    }
+}
+@media screen and (max-width: 768px) {
+    #rockimg {
+        height: 15vh;
+        width: 16vw;
+        object-fit: cover;
+        border-radius: 60%;
+    }
+    #paperimg{
+        height: 15vh;
+        width: 16vw;
+        object-fit: cover;
+        border-radius: 60%;
+    }
+    #scissorimg {
+        height: 15vh;
+        width: 16vw;
+        object-fit: cover;
+        border-radius: 60%;
+    }
+    #computer_title {
+        display: none;
+    }
+    #responsive_title {
+        display: block;
+    }
+    .picsofgame {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        /* border: 2px solid black; */
+    }
+    .winorlose {
+        height: 100px;
+        width: 60vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5vw;
+        font-family: poppins,sans-serif;
+        word-spacing: 3px;
+        letter-spacing: 2px;
+    }
+    #resetbtn {
+        width: 120px;
+    }
+    .winorlose {
+        margin-left: 20px;
+        font-size: 19px;
+        margin-top: 23px;
+        padding: 10px;
+        width: 60vw;
+    }
+}
+
+@media (max-width: 576px) {
+    #rockimg {
+        height: 12vh;
+        width: 15vw;
+        object-fit: cover;
+        border-radius: 60%;
+    }
+    #paperimg{
+        height: 12vh;
+        width: 15vw;
+        object-fit: cover;
+        border-radius: 60%;
+    }
+    #scissorimg {
+        height: 12vh;
+        width: 15vw;
+        object-fit: cover;
+        border-radius: 60%;
+    }
+    #computer_title {
+        display: none;
+    }
+    #responsive_title {
+        display: block;
+        font-size: 2.5rem;
+    }
+    #resetbtn {
+        width: 120px;
+    }
+    .winorlose {
+        margin-left: 20px;
+        font-size: 19px;
+        margin-top: 23px;
+        padding: 10px;
+        width: 80vw;
+    }
+
+}
+
+@media (max-width : 431px) {
+    #rockimg {
+        height: 12vh;
+        width: 20vw;
+        object-fit: cover;
+        border-radius: 60%;
+    }
+    #paperimg{
+        height: 12vh;
+        width: 20vw;
+        object-fit: cover;
+        border-radius: 60%;
+    }
+    #scissorimg {
+        height: 12vh;
+        width: 20vw;
+        object-fit: cover;
+        border-radius: 60%;
+    }
+    #computer_title {
+        display: none;
+    }
+    #responsive_title {
+        display: block;
+        font-size: 2rem;
+    }
+    .winorlose {
+        margin-left: 20px;
+        font-size: 19px;
+        margin-top: 23px;
+        padding: 10px;
+        width: 80vw;
+    }
+}
